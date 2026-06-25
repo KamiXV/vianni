@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vianni — Sculpted for the Bold</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="#collection" class="nav-link">Shop</a>
+      <a href="#lookbook"   class="nav-link">Lookbook</a>
+      <a href="#atelier"    class="nav-link">Atelier</a>
+    </div>
+    <a href="#hero" class="nav-logo">Vianni</a>
+    <div class="nav-right">
+      <a href="#contact" class="nav-link">Contact</a>
+      <button class="nav-cta">Reserve</button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+
+      <!-- LEFT TEXT -->
+      <div class="hero-text">
+        <p class="eyebrow fade-up" style="--d:.00s">SS 2025 Collection</p>
+        <h1 class="hero-headline">
+          <span class="hl-1 fade-up" style="--d:.12s">Sculpted</span>
+          <span class="hl-2 fade-up" style="--d:.24s"><em>for the</em></span>
+          <span class="hl-3 fade-up" style="--d:.36s">Bold.</span>
+        </h1>
+        <p class="hero-sub fade-up" style="--d:.46s">
+          Architectural form. Unapologetic presence.<br>
+          Every silhouette is an act of intention.
+        </p>
+        <div class="hero-btns fade-up" style="--d:.56s">
+          <a href="#collection" class="btn-primary">Explore Collection</a>
+          <a href="#atelier"    class="btn-ghost">Our Philosophy</a>
+        </div>
+        <div class="slide-counter fade-up" style="--d:.66s">
+          <span class="sc-cur">01</span>
+          <span class="sc-line"></span>
+          <span class="sc-tot">04</span>
+        </div>
+      </div>
+
+      <!-- RIGHT SLIDESHOW -->
+      <div class="hero-rhs">
+        <div class="slideshow" id="slideshow">
+
+          <div class="slide active">
+            <img src="imgs/hero1.jpg" alt="Vianni — The Noir Classique" />
+            <div class="slide-caption">
+              <span class="sc-name">The Noir Classique</span>
+              <span class="sc-price">$1,490</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imgs/hero2.jpg" alt="Vianni — The Scarlett" />
+            <div class="slide-caption">
+              <span class="sc-name">The Scarlett</span>
+              <span class="sc-price">$1,350</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imgs/hero3.jpg" alt="Vianni — The Fuchsia" />
+            <div class="slide-caption">
+              <span class="sc-name">The Fuchsia</span>
+              <span class="sc-price">$1,290</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imgs/hero4.jpg" alt="Vianni — The Inferno" />
+            <div class="slide-caption">
+              <span class="sc-name">The Inferno</span>
+              <span class="sc-price">$1,390</span>
+            </div>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="slide-bar"><div class="slide-bar-fill" id="slideBar"></div></div>
+
+          <!-- Dots -->
+          <div class="slide-dots">
+            <button class="dot active" data-i="0"></button>
+            <button class="dot"        data-i="1"></button>
+            <button class="dot"        data-i="2"></button>
+            <button class="dot"        data-i="3"></button>
+          </div>
+        </div>
+
+        <!-- Floating stat -->
+        <div class="hero-stat reveal">
+          <p class="hs-num">XIV</p>
+          <p class="hs-lbl">Years of craft</p>
+        </div>
+      </div>
+
+    </div><!-- .hero-inner -->
+
+    <!-- Ticker -->
+    <div class="ticker">
+      <div class="ticker-inner">
+        <span>Quiet Luxury</span><span class="tx-sep">—</span>
+        <span>SS 2025</span><span class="tx-sep">—</span>
+        <span>Architectural Form</span><span class="tx-sep">—</span>
+        <span>Handcrafted in Italy</span><span class="tx-sep">—</span>
+        <span>Open-Toe Silhouettes</span><span class="tx-sep">—</span>
+        <span>The New Femininity</span><span class="tx-sep">—</span>
+        <span>Quiet Luxury</span><span class="tx-sep">—</span>
+        <span>SS 2025</span><span class="tx-sep">—</span>
+        <span>Architectural Form</span><span class="tx-sep">—</span>
+        <span>Handcrafted in Italy</span><span class="tx-sep">—</span>
+        <span>Open-Toe Silhouettes</span><span class="tx-sep">—</span>
+        <span>The New Femininity</span><span class="tx-sep">—</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COLLECTION
+  ═══════════════════════════════════════════ -->
+  <section class="collection" id="collection">
+
+    <div class="col-header">
+     
+      <h2 class="col-title reveal">The Art of<br><em>Elevation</em></h2>
+     
+    </div>
+
+    <!--
+      3-column grid, 2 rows, all heights locked via CSS vars.
+      Col1 spans both rows | Col2 row1=editorial, row2=img | Col3 row1=img, row2=img
+    -->
+    <div class="col-grid">
+
+      <!-- A: tall, col1, rows 1-2 -->
+      <article class="cg-a cg-card reveal">
+        <div class="cg-img-wrap">
+          <img src="imgs/col_a.jpg" alt="The Platform Noir" />
+          <div class="cg-overlay"><a href="#" class="qv-btn">Quick View</a></div>
+        </div>
+        <div class="cg-info">
+          <p class="cg-name">The Platform Noir</p>
+          <p class="cg-price">$1,290</p>
+        </div>
+        <span class="cg-badge">New</span>
+      </article>
+
+      <!-- B: editorial text, col2, row1 -->
+      <div class="cg-b cg-card reveal">
+        <div class="cg-editorial">
+          <p class="ed-num">01</p>
+          <p class="ed-quote">"The heel is the punctuation mark of the silhouette — it decides the whole sentence."</p>
+          <a href="#atelier" class="ed-link">Read the Story →</a>
+        </div>
+      </div>
+
+      <!-- C: col3, row1 -->
+      <article class="cg-c cg-card reveal">
+        <div class="cg-img-wrap">
+          <img src="imgs/col_c.jpg" alt="The Ankle Strap" />
+          <div class="cg-overlay"><a href="#" class="qv-btn">Quick View</a></div>
+        </div>
+        <div class="cg-info">
+          <p class="cg-name">The Ankle Strap</p>
+          <p class="cg-price">$1,150</p>
+        </div>
+      </article>
+
+      <!-- D: col2, row2 -->
+      <article class="cg-d cg-card reveal">
+        <div class="cg-img-wrap">
+          <img src="imgs/col_d.jpg" alt="The Nude Pump" />
+          <div class="cg-overlay"><a href="#" class="qv-btn">Quick View</a></div>
+        </div>
+        <div class="cg-info">
+          <p class="cg-name">The Nude Pump</p>
+          <p class="cg-price">$1,090</p>
+        </div>
+        <span class="cg-badge cg-best">Best Seller</span>
+      </article>
+
+      <!-- E: col3, row2 -->
+      <article class="cg-e cg-card reveal">
+        <div class="cg-img-wrap">
+          <img src="imgs/col_e.jpg" alt="The Strappy Soir" />
+          <div class="cg-overlay"><a href="#" class="qv-btn">Quick View</a></div>
+        </div>
+        <div class="cg-info">
+          <p class="cg-name">The Strappy Soir</p>
+          <p class="cg-price">$1,190</p>
+        </div>
+        <span class="cg-badge cg-ltd">Limited</span>
+      </article>
+
+    </div><!-- .col-grid -->
+
+    <div class="col-cta reveal">
+      <a href="#" class="btn-primary">View Full Collection</a>
+      <p class="col-cta-sub">Complimentary worldwide shipping on orders over $500</p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LOOKBOOK
+  ═══════════════════════════════════════════ -->
+  <section class="lookbook" id="lookbook">
+
+    <div class="lb-header">
+      <span class="eyebrow reveal">Campaign 2025</span>
+      <h2 class="lb-title reveal">The Lookbook</h2>
+    </div>
+
+    <div class="lb-grid">
+
+      <div class="lb-a lb-item reveal">
+        <img src="imgs/lb_a.jpg" alt="Campaign — Feu" />
+        <div class="lb-cap"><span>Campaign I</span><span>Feu Sacré</span></div>
+      </div>
+
+      <div class="lb-b lb-item reveal">
+        <img src="imgs/lb_b.jpg" alt="Campaign — Mosaic" />
+        <div class="lb-cap"><span>Campaign II</span><span>La Mosaïque</span></div>
+      </div>
+
+      <div class="lb-c lb-item reveal">
+        <div class="lb-text">
+          <span class="eyebrow">The Vision</span>
+          <p>"Architecture, after all, is the art of how to waste space — we prefer to fill it with form."</p>
+          <a href="#atelier" class="ed-link">Discover →</a>
+        </div>
+      </div>
+
+      <div class="lb-d lb-item reveal">
+        <img src="imgs/lb_d.jpg" alt="Campaign — Ombre" />
+        <div class="lb-cap"><span>Campaign III</span><span>Ombre Nuit</span></div>
+      </div>
+
+      <div class="lb-e lb-item reveal">
+        <img src="imgs/lb_e.jpg" alt="Campaign — Rayure" />
+        <div class="lb-cap"><span>Campaign IV</span><span>La Rayure</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MANIFESTO
+  ═══════════════════════════════════════════ -->
+  <section class="manifesto" id="manifesto">
+    <div class="mf-bg">
+      <img src="imgs/manifesto.jpg" alt="" class="mf-img" />
+      <div class="mf-overlay"></div>
+    </div>
+    <div class="mf-content">
+      <p class="eyebrow reveal" style="color:rgba(244,244,240,.45)">The Vianni Creed</p>
+      <blockquote class="mf-quote reveal">
+        <span>We don't make shoes.</span>
+        <span class="mf-dim"><em>We engineer</em></span>
+        <span>confidence.</span>
+      </blockquote>
+      <div class="mf-sub reveal">
+        <p>Founded in Milan, 2010. Every pair is made by hand in our atelier — no shortcuts, no compromises, only the relentless pursuit of the perfect arch.</p>
+        <a href="#atelier" class="btn-ghost-lt">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ATELIER
+  ═══════════════════════════════════════════ -->
+  <section class="atelier" id="atelier">
+    <div class="at-inner">
+
+      <div class="at-text">
+        <span class="eyebrow reveal">The Vianni Atelier</span>
+        <h2 class="at-title reveal">Where Form<br>Meets <em>Function</em></h2>
+        <p class="at-body reveal">Every Vianni silhouette is born in our Milan atelier, where master cordwainers with decades of experience shape each heel by hand. We source only the finest full-grain leathers from Tuscany — because a shoe is not a product. It is a commitment.</p>
+        <div class="at-steps reveal">
+          <div class="step"><span class="st-n">01</span><span class="st-l">Concept &amp; Design</span></div>
+          <div class="step"><span class="st-n">02</span><span class="st-l">Material Selection</span></div>
+          <div class="step"><span class="st-n">03</span><span class="st-l">Hand-lasted</span></div>
+          <div class="step"><span class="st-n">04</span><span class="st-l">Quality Control</span></div>
+        </div>
+        <a href="#contact" class="btn-primary reveal">Book an Atelier Visit</a>
+      </div>
+
+      <div class="at-img reveal" data-parallax="0.08">
+        <img src="imgs/atelier.jpg" alt="Vianni atelier" />
+        <div class="at-tag">
+          <span class="eyebrow">Milan, Italy</span>
+          <p>Est. 2010</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CRAFT NUMBERS
+  ═══════════════════════════════════════════ -->
+  <section class="craft">
+    <div class="craft-item reveal"><p class="cr-n">100%</p><p class="cr-l">Full-grain Italian leather</p></div>
+    <div class="craft-div"></div>
+    <div class="craft-item reveal"><p class="cr-n">48h</p><p class="cr-l">Per pair, hand-stitched</p></div>
+    <div class="craft-div"></div>
+    <div class="craft-item reveal"><p class="cr-n">12</p><p class="cr-l">Artisans per silhouette</p></div>
+    <div class="craft-div"></div>
+    <div class="craft-item reveal"><p class="cr-n">∞</p><p class="cr-l">Years of wear, with care</p></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="ct-inner">
+
+      <div class="ct-left">
+        <span class="eyebrow reveal">Get in Touch</span>
+        <h2 class="ct-title reveal">Let's Create<br><em>Something</em><br>Together.</h2>
+        <div class="ct-details reveal">
+          <div class="ct-row"><p class="ct-lbl">Atelier Milano</p><p>Via della Spiga 12, 20121 Milano</p></div>
+          <div class="ct-row"><p class="ct-lbl">Email</p><p>atelier@vianni.com</p></div>
+          <div class="ct-row"><p class="ct-lbl">Bespoke Service</p><p>+39 02 7634 8800</p></div>
+        </div>
+      </div>
+
+      <form class="ct-form reveal" onsubmit="return false;">
+        <div class="f-row">
+          <div class="f-group"><label>First Name</label><input type="text" placeholder="Sofia" /></div>
+          <div class="f-group"><label>Last Name</label><input type="text" placeholder="Romano" /></div>
+        </div>
+        <div class="f-group"><label>Email Address</label><input type="email" placeholder="sofia@example.com" /></div>
+        <div class="f-group">
+          <label>Your Interest</label>
+          <select>
+            <option value="">Select a service</option>
+            <option>Bespoke Commission</option>
+            <option>Atelier Appointment</option>
+            <option>Wholesale Enquiry</option>
+            <option>Press &amp; Media</option>
+          </select>
+        </div>
+        <div class="f-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your vision…"></textarea></div>
+        <button type="submit" class="btn-primary f-submit">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="ft-top reveal">
+      <div class="ft-col">
+        <p class="ft-title">Maison</p>
+        <a href="#">Our Story</a><a href="#">Ateliers</a><a href="#">Careers</a><a href="#">Press</a>
+      </div>
+      <div class="ft-col">
+        <p class="ft-title">Collections</p>
+        <a href="#">SS 2025</a><a href="#">Archive</a><a href="#">Bridal</a><a href="#">Limited Editions</a>
+      </div>
+      <div class="ft-col">
+        <p class="ft-title">Client Care</p>
+        <a href="#">Sizing Guide</a><a href="#">Shipping &amp; Returns</a><a href="#">Bespoke Service</a><a href="#">Contact</a>
+      </div>
+      <div class="ft-col ft-nl">
+        <p class="ft-title">The Inner Circle</p>
+        <p class="ft-nl-sub">Access to pre-launches and atelier events.</p>
+        <div class="nl-row">
+          <input type="email" class="nl-input" placeholder="Your email" />
+          <button class="nl-btn">→</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-wm"><span>VIANNI</span></div>
+
+    <div class="ft-bottom">
+      <p>© 2025 Vianni. All rights reserved. Made with intention in Milan.</p>
+      <div class="ft-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
